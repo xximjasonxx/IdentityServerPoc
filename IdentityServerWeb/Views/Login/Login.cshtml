@@ -1,0 +1,28 @@
+﻿@model LoginRequestModel
+<html>
+<head>
+    <title>Login to Application</title>
+</head>
+
+<body>
+    <form asp-action="Index">
+        <div>
+            <label asp-for="Username"></label>
+            <input asp-for="Username" />
+            <span asp-validation-for="Username" style="color: red"></span>
+        </div>
+
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password" style="color: red"></span>
+        </div>
+
+        <input type="hidden" asp-for="ReturnUrl" />
+
+        <div style="padding-left: 30px">
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+</body>
+</html>
